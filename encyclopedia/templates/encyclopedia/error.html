@@ -1,0 +1,19 @@
+{% extends 'encyclopedia/layout.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block body %}
+
+
+  {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+<div class="alert alert-danger text-center" role="alert">
+    {{ message }}
+  </div>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

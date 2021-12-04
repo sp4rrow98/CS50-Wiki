@@ -1,0 +1,7 @@
+# Elevi
+
+* Teo
+
+* Marius
+
+* Andrei

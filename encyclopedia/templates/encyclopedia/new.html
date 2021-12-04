@@ -1,0 +1,29 @@
+{% extends 'encyclopedia/layout.html' %} 
+{% block title %}
+ {{ title }} 
+{%endblock %}
+{% block body %}
+
+<div class="m-4">
+<form  action="{% url 'new' %}" method="post">
+	{% csrf_token %}
+	<h4 class="display-2">Create new Page:</h4>
+	<h6>Title:</h6>
+	{{ post.title }}
+	<h6>Content:</h6>
+	{{post.textarea}}
+	<br />
+	<input class="save btn btn-dark" type="submit" value="Save"/>
+</form>
+<br> <br>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+<div class="alert alert-danger text-center" role="alert">
+    {{ message }}
+  </div>
+    {% endfor %}
+	{% endif %}
+</div>
+
+{% endblock %}
